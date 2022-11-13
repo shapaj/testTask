@@ -10,8 +10,10 @@ import UIKit
 struct ChoosingAssembly {
     
     static func createModule(coordinator: Coordinator) -> UIViewController {
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .yellow
+
+        let viewController = ChoosingViewController.createVC()
+        viewController.presenter = ChoosingPresenter(viewController:viewController, coordinator: coordinator)
+        
         return viewController
     }
 }

@@ -11,12 +11,10 @@ final class StartViewController: BaseViewController, StartViewProtocol {
     
     @IBOutlet private weak var startButton: UIButton!
     var presenter: StartPresenterProtocol!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        
     }
     
     private func setupView() {

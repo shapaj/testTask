@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A02AF02292125C000CD2D44 /* PageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A02AF01292125C000CD2D44 /* PageView.xib */; };
 		2A690AC6292064AE008D4FBA /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AC5292064AE008D4FBA /* DefaultValues.swift */; };
 		2A690AC829206825008D4FBA /* ChoosingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AC729206825008D4FBA /* ChoosingAssembly.swift */; };
+		2A690ACB2920E161008D4FBA /* ChoosingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A690ACA2920E161008D4FBA /* ChoosingViewController.storyboard */; };
+		2A690ACD2920E1A0008D4FBA /* ChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690ACC2920E1A0008D4FBA /* ChoosingViewController.swift */; };
+		2A690ACF2920E1BC008D4FBA /* ChoosingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690ACE2920E1BC008D4FBA /* ChoosingViewProtocol.swift */; };
+		2A690AD12920E1DB008D4FBA /* ChoosingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AD02920E1DB008D4FBA /* ChoosingPresenter.swift */; };
+		2A690AD32920E4EE008D4FBA /* ChoosingPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AD22920E4EE008D4FBA /* ChoosingPresenterProtocol.swift */; };
+		2A690AD529210A87008D4FBA /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AD429210A87008D4FBA /* PageView.swift */; };
+		2A690ADB29210C6A008D4FBA /* ChoosingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690ADA29210C6A008D4FBA /* ChoosingViewModel.swift */; };
+		2A690ADD292111F4008D4FBA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690ADC292111F4008D4FBA /* UIView+.swift */; };
 		2A6AF6382920100200A06B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6AF6372920100200A06B61 /* AppDelegate.swift */; };
 		2A6AF63A2920100200A06B61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6AF6392920100200A06B61 /* SceneDelegate.swift */; };
 		2A6AF6422920100200A06B61 /* testTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A6AF6402920100200A06B61 /* testTask.xcdatamodeld */; };
@@ -30,8 +39,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A02AF01292125C000CD2D44 /* PageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageView.xib; sourceTree = "<group>"; };
 		2A690AC5292064AE008D4FBA /* DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
 		2A690AC729206825008D4FBA /* ChoosingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingAssembly.swift; sourceTree = "<group>"; };
+		2A690ACA2920E161008D4FBA /* ChoosingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosingViewController.storyboard; sourceTree = "<group>"; };
+		2A690ACC2920E1A0008D4FBA /* ChoosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingViewController.swift; sourceTree = "<group>"; };
+		2A690ACE2920E1BC008D4FBA /* ChoosingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingViewProtocol.swift; sourceTree = "<group>"; };
+		2A690AD02920E1DB008D4FBA /* ChoosingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingPresenter.swift; sourceTree = "<group>"; };
+		2A690AD22920E4EE008D4FBA /* ChoosingPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingPresenterProtocol.swift; sourceTree = "<group>"; };
+		2A690AD429210A87008D4FBA /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		2A690ADA29210C6A008D4FBA /* ChoosingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingViewModel.swift; sourceTree = "<group>"; };
+		2A690ADC292111F4008D4FBA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		2A6AF6342920100200A06B61 /* testTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6AF6372920100200A06B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A6AF6392920100200A06B61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A690AD629210A8D008D4FBA /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				2A690AD429210A87008D4FBA /* PageView.swift */,
+				2A02AF01292125C000CD2D44 /* PageView.xib */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
 		2A6AF62B2920100200A06B61 = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +182,14 @@
 		2AE949F7292027AB00F706BC /* ChoosingView */ = {
 			isa = PBXGroup;
 			children = (
+				2A690AD629210A8D008D4FBA /* PageView */,
 				2A690AC729206825008D4FBA /* ChoosingAssembly.swift */,
+				2A690AD22920E4EE008D4FBA /* ChoosingPresenterProtocol.swift */,
+				2A690AD02920E1DB008D4FBA /* ChoosingPresenter.swift */,
+				2A690ACE2920E1BC008D4FBA /* ChoosingViewProtocol.swift */,
+				2A690ACC2920E1A0008D4FBA /* ChoosingViewController.swift */,
+				2A690ADA29210C6A008D4FBA /* ChoosingViewModel.swift */,
+				2A690ACA2920E161008D4FBA /* ChoosingViewController.storyboard */,
 			);
 			path = ChoosingView;
 			sourceTree = "<group>";
@@ -181,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				2AE94A0F29204CA200F706BC /* UIViewController+.swift */,
+				2A690ADC292111F4008D4FBA /* UIView+.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -273,6 +308,8 @@
 				2A6AF6472920100600A06B61 /* LaunchScreen.storyboard in Resources */,
 				2A6AF6442920100600A06B61 /* Assets.xcassets in Resources */,
 				2AE94A0129202B1400F706BC /* StartViewController.storyboard in Resources */,
+				2A690ACB2920E161008D4FBA /* ChoosingViewController.storyboard in Resources */,
+				2A02AF02292125C000CD2D44 /* PageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +367,7 @@
 				2AE94A0E2920451000F706BC /* DataManager.swift in Sources */,
 				2A690AC829206825008D4FBA /* ChoosingAssembly.swift in Sources */,
 				2A6AF6422920100200A06B61 /* testTask.xcdatamodeld in Sources */,
+				2A690AD12920E1DB008D4FBA /* ChoosingPresenter.swift in Sources */,
 				2A690AC6292064AE008D4FBA /* DefaultValues.swift in Sources */,
 				2A6AF6382920100200A06B61 /* AppDelegate.swift in Sources */,
 				2AE94A0329202BF200F706BC /* StartPresenter.swift in Sources */,
@@ -337,11 +375,17 @@
 				2AE949FA2920280800F706BC /* StartViewAssembly.swift in Sources */,
 				2AE94A0C2920367B00F706BC /* Coordinator.swift in Sources */,
 				2AE949FF292028DC00F706BC /* BaseViewController.swift in Sources */,
+				2A690ACD2920E1A0008D4FBA /* ChoosingViewController.swift in Sources */,
+				2A690AD529210A87008D4FBA /* PageView.swift in Sources */,
 				2AE94A1029204CA200F706BC /* UIViewController+.swift in Sources */,
+				2A690AD32920E4EE008D4FBA /* ChoosingPresenterProtocol.swift in Sources */,
 				2AE94A0729202CA100F706BC /* StartViewProtocol.swift in Sources */,
+				2A690ACF2920E1BC008D4FBA /* ChoosingViewProtocol.swift in Sources */,
 				2AE94A0529202C8700F706BC /* StartPresenterProtocol.swift in Sources */,
 				2AE94A152920508500F706BC /* ViewUpdateble.swift in Sources */,
+				2A690ADB29210C6A008D4FBA /* ChoosingViewModel.swift in Sources */,
 				2AE94A0929202DF700F706BC /* ViewLifeCycle.swift in Sources */,
+				2A690ADD292111F4008D4FBA /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@ class Coordinator {
     
     init(windowScene: UIWindowScene) {
         self.window = UIWindow(windowScene: windowScene)
-
+        
         self.navigationController = UINavigationController()
         setupWindow()
     }
@@ -31,13 +31,10 @@ class Coordinator {
     }
     
     func didTapStartButton() {
-        
         let nextPage = UINavigationController(rootViewController: ChoosingAssembly.createModule(coordinator: self))
-        
         nextPage.modalPresentationStyle = .fullScreen
-        
-        navigationController.present(nextPage, animated: true)
+        DispatchQueue.main.async { [weak navigationController] in
+            navigationController?.present(nextPage, animated: true)
+        }
     }
-    
-    
 }

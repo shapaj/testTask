@@ -16,4 +16,10 @@ struct DefaultValues {
     struct ViewSizes {
         static let cornerRadius = CGFloat(5)
     }
+    
+    struct Images {
+        static let firstView = UIImage(named: "firstView")!
+        static let secondView = UIImage(named: "secondView")!
+        static let thirtView = UIImage(named: "thirtView")!
+    }
 }
