@@ -32,7 +32,9 @@ class ChoosingPresenter: ChoosingPresenterProtocol {
     func didTapNavigationButton() {
         if currentPage < PageViewModel.maximumIndex {
             currentPage += 1
-            changePage(needNewOffset: true)
+            DispatchQueue.main.async { [viewController, currentPage] in
+                viewController?.updateViewInterface(currentPage)
+            }
         } else {
             print("TODO")
         }

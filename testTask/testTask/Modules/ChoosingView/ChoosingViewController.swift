@@ -39,13 +39,14 @@ final class ChoosingViewController: BaseViewController, ChoosingViewProtocol, UI
         }
     }
     
-    private func updateView() {
+    private func updateScrollViewPosition(curentPage: Int) {
+        let point = CGPoint(x: screenSize.width * CGFloat(curentPage), y: CGFloat(0))
+        scrollView.setContentOffset(point, animated: true)
+    }
+    
+    private func updatePageControl() {
         pageControl.currentPage = viewModel?.curentPage ?? 0
         navigationButton.setTitle(viewModel?.buttonLabel, for: .normal)
-        if viewModel?.needNewOffset == true {
-            let point = CGPoint(x: screenSize.width * CGFloat(viewModel?.curentPage ?? 0), y: CGFloat(0))
-            scrollView.setContentOffset(point, animated: true)
-        }
     }
     
     func updateViewInterface(_ viewModel: Any) {
@@ -54,7 +55,9 @@ final class ChoosingViewController: BaseViewController, ChoosingViewProtocol, UI
             updateScrollView()
         } else if let viewModel = viewModel as? ChoosingViewModel {
             self.viewModel = viewModel
-            updateView()
+            updatePageControl()
+        } else if let curentPage = viewModel as? Int {
+            updateScrollViewPosition(curentPage: curentPage)
         } else {
             fatalError("invalid model")
         }
