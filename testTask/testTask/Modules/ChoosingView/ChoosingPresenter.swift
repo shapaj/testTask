@@ -11,16 +11,19 @@ class ChoosingPresenter: ChoosingPresenterProtocol {
     
     weak var viewController: ChoosingViewProtocol?
     weak var coordinator: Coordinator?
+    unowned var dataManager: DataManager
+    
     private var currentPage = 0
     
-    init(viewController: ChoosingViewProtocol, coordinator: Coordinator) {
+    init(viewController: ChoosingViewProtocol, coordinator: Coordinator, dataManager: DataManager) {
         self.viewController = viewController
         self.coordinator = coordinator
+        self.dataManager = dataManager
     }
     
     func viewDidLoad() {
         setupPages()
-        changePage(needNewOffset: false)
+        changePage()
     }
     private func setupPages() {
         let pagesViewModel = PageViewModel.pagesViewModel()
@@ -36,27 +39,47 @@ class ChoosingPresenter: ChoosingPresenterProtocol {
                 viewController?.updateViewInterface(currentPage)
             }
         } else {
-            print("TODO")
+            if dataManager.getTimerCompleted() {
+                presentAlert()
+            } else {
+                presentTimerView()
+            }
         }
     }
     
     func didScrollPage(currentPage: Int) {
         self.currentPage = currentPage
-        changePage(needNewOffset: false)
+        changePage()
     }
     
-    func changePage(needNewOffset: Bool) {
+    private func presentTimerView() {
+        viewController?.presentTimerView()
+    }
+    
+    private func presentAlert() {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        alert.title = "Thank you for your interest"
+        alert.message = "The functionality is under development"
+        alert.addAction(UIAlertAction(title: "ok", style: .default))
+        viewController?.present(alert, animated: true)
+    }
+    
+    func willRemoveFromSuperView() {
+        dataManager.saveTimerCompleted(completed: true)
+    }
+    
+    
+    private func changePage() {
         var buttonLabel: String
         if currentPage < PageViewModel.maximumIndex {
-            buttonLabel = "next"
+            buttonLabel = "Next"
         } else {
             buttonLabel = "Continue"
         }
         
         DispatchQueue.main.async { [viewController, currentPage] in
             viewController?.updateViewInterface(ChoosingViewModel(currentPage: currentPage,
-                                                                  buttonLabel: buttonLabel,
-                                                                  needNewOffset: needNewOffset))
+                                                                  buttonLabel: buttonLabel))
         }
     }
 }

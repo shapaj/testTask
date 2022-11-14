@@ -39,13 +39,13 @@ final class ChoosingViewController: BaseViewController, ChoosingViewProtocol, UI
         }
     }
     
-    private func updateScrollViewPosition(curentPage: Int) {
-        let point = CGPoint(x: screenSize.width * CGFloat(curentPage), y: CGFloat(0))
+    private func updateScrollViewPosition(currentPage: Int) {
+        let point = CGPoint(x: screenSize.width * CGFloat(currentPage), y: CGFloat(0))
         scrollView.setContentOffset(point, animated: true)
     }
     
     private func updatePageControl() {
-        pageControl.currentPage = viewModel?.curentPage ?? 0
+        pageControl.currentPage = viewModel?.currentPage ?? 0
         navigationButton.setTitle(viewModel?.buttonLabel, for: .normal)
     }
     
@@ -56,11 +56,25 @@ final class ChoosingViewController: BaseViewController, ChoosingViewProtocol, UI
         } else if let viewModel = viewModel as? ChoosingViewModel {
             self.viewModel = viewModel
             updatePageControl()
-        } else if let curentPage = viewModel as? Int {
-            updateScrollViewPosition(curentPage: curentPage)
+        } else if let currentPage = viewModel as? Int {
+            updateScrollViewPosition(currentPage: currentPage)
         } else {
             fatalError("invalid model")
         }
+    }
+    
+    func presentTimerView() {
+        let timerView = TimerView.initFromXib()
+        timerView.delegate = presenter
+        view.addSubview(timerView)
+        
+        timerView.translatesAutoresizingMaskIntoConstraints = true
+        NSLayoutConstraint.activate([
+            timerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            timerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            timerView.topAnchor.constraint(equalTo: view.topAnchor),
+            timerView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     @IBAction func didTapNavigationButton(_ sender: UIButton) {

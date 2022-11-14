@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol  ChoosingPresenterProtocol: ViewLifeCycleProtocol {
+protocol  ChoosingPresenterProtocol: ViewLifeCycleProtocol, TimerViewDelegate {
     func didTapNavigationButton()
     func didScrollPage(currentPage: Int)
 }

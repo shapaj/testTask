@@ -31,7 +31,7 @@ class Coordinator {
     }
     
     func didTapStartButton() {
-        let nextPage = UINavigationController(rootViewController: ChoosingAssembly.createModule(coordinator: self))
+        let nextPage = UINavigationController(rootViewController: ChoosingAssembly.createModule(coordinator: self, dataManager: dataManager))
         nextPage.modalPresentationStyle = .fullScreen
         DispatchQueue.main.async { [weak navigationController] in
             navigationController?.present(nextPage, animated: true)

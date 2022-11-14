@@ -15,6 +15,7 @@ struct DefaultValues {
     }
     struct ViewSizes {
         static let cornerRadius = CGFloat(5)
+        static let timerViewCornerRadius = CGFloat(28)
     }
     
     struct Images {
