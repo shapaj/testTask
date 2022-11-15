@@ -7,6 +7,4 @@
 
 import UIKit
 
-protocol StartViewProtocol: UIViewController {
-    
-}
+protocol StartViewProtocol: UIViewController, ViewUpdateble { }

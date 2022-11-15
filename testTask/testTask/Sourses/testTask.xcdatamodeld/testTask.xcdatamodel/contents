@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G630" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="WatchedItem" representedClassName="WatchedItem" syncable="YES">
+        <attribute name="keyIndex" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="watchingCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="watchingAction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WatchingAction" inverseName="item" inverseEntity="WatchingAction"/>
+    </entity>
+    <entity name="WatchingAction" representedClassName="WatchingAction" syncable="YES">
+        <attribute name="watchTime" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WatchedItem" inverseName="watchingAction" inverseEntity="WatchedItem"/>
+    </entity>
+    <elements>
+        <element name="WatchingAction" positionX="-239.6832885742188" positionY="26.65725708007812" width="128" height="73"/>
+        <element name="WatchedItem" positionX="-333.0787963867188" positionY="200.982177734375" width="128" height="103"/>
+    </elements>
 </model>

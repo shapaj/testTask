@@ -8,11 +8,11 @@
 import UIKit
 
 struct StartViewAssembly {
-    static func createModule(coordinator: Coordinator) -> UIViewController {
+    static func createModule(coordinator: Coordinator, dataManager: DataManager) -> UIViewController {
         
         let viewController = StartViewController.createVC()
         
-        viewController.presenter = StartPresenter(viewController: viewController, coordinator: coordinator)
+        viewController.presenter = StartPresenter(viewController: viewController, coordinator: coordinator, dataManager: dataManager)
         
         return viewController
     }

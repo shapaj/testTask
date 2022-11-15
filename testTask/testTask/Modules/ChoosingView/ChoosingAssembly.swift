@@ -9,10 +9,13 @@ import UIKit
 
 struct ChoosingAssembly {
     
-    static func createModule(coordinator: Coordinator, dataManager: DataManager) -> UIViewController {
+    static func createModule(coordinator: Coordinator, userDefaultsManager: UserDefaultsManager, dataManager: DataManager) -> UIViewController {
 
         let viewController = ChoosingViewController.createVC()
-        viewController.presenter = ChoosingPresenter(viewController:viewController, coordinator: coordinator, dataManager: dataManager)
+        viewController.presenter = ChoosingPresenter(viewController:viewController,
+                                                     coordinator: coordinator,
+                                                     userDefaultsManager: userDefaultsManager,
+                                                     dataManager: dataManager)
         
         return viewController
     }

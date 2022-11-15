@@ -11,14 +11,22 @@ class ChoosingPresenter: ChoosingPresenterProtocol {
     
     weak var viewController: ChoosingViewProtocol?
     weak var coordinator: Coordinator?
-    unowned var dataManager: DataManager
+    unowned var userDefaultsManager: UserDefaultsManager
+    weak var dataManager: DataManager?
     
-    private var currentPage = 0
+    private var currentPage = 0 {
+        didSet {
+            if currentPage != oldValue {
+                saveWatchingData(currentPage: currentPage)
+            }
+        }
+    }
     
-    init(viewController: ChoosingViewProtocol, coordinator: Coordinator, dataManager: DataManager) {
+    init(viewController: ChoosingViewProtocol, coordinator: Coordinator, userDefaultsManager: UserDefaultsManager, dataManager: DataManager) {
         self.viewController = viewController
         self.coordinator = coordinator
         self.dataManager = dataManager
+        self.userDefaultsManager = userDefaultsManager
     }
     
     func viewDidLoad() {
@@ -30,26 +38,7 @@ class ChoosingPresenter: ChoosingPresenterProtocol {
         DispatchQueue.main.async { [viewController] in
             viewController?.updateViewInterface(pagesViewModel)
         }
-    }
-    
-    func didTapNavigationButton() {
-        if currentPage < PageViewModel.maximumIndex {
-            currentPage += 1
-            DispatchQueue.main.async { [viewController, currentPage] in
-                viewController?.updateViewInterface(currentPage)
-            }
-        } else {
-            if dataManager.getTimerCompleted() {
-                presentAlert()
-            } else {
-                presentTimerView()
-            }
-        }
-    }
-    
-    func didScrollPage(currentPage: Int) {
-        self.currentPage = currentPage
-        changePage()
+        saveWatchingData(currentPage: 0)
     }
     
     private func presentTimerView() {
@@ -64,22 +53,42 @@ class ChoosingPresenter: ChoosingPresenterProtocol {
         viewController?.present(alert, animated: true)
     }
     
-    func willRemoveFromSuperView() {
-        dataManager.saveTimerCompleted(completed: true)
+    private func saveWatchingData(currentPage: Int) {
+        let queue = DispatchQueue.global(qos: .background)
+        queue.async { [dataManager, currentPage] in
+            dataManager?.newWatching(index: currentPage + 1, time: Date())
+        }
     }
     
-    
     private func changePage() {
-        var buttonLabel: String
-        if currentPage < PageViewModel.maximumIndex {
-            buttonLabel = "Next"
-        } else {
-            buttonLabel = "Continue"
-        }
+        var buttonLabel = currentPage < PageViewModel.maximumIndex ? "Next" : "Continue"
         
         DispatchQueue.main.async { [viewController, currentPage] in
-            viewController?.updateViewInterface(ChoosingViewModel(currentPage: currentPage,
-                                                                  buttonLabel: buttonLabel))
+            viewController?.updateViewInterface(ChoosingViewModel(currentPage: currentPage, buttonLabel: buttonLabel))
         }
+    }
+    
+    func didTapNavigationButton() {
+        if currentPage < PageViewModel.maximumIndex {
+            currentPage += 1
+            DispatchQueue.main.async { [viewController, currentPage] in
+                viewController?.updateViewInterface(currentPage)
+            }
+        } else {
+            if userDefaultsManager.getTimerCompleted() {
+                presentAlert()
+            } else {
+                presentTimerView()
+            }
+        }
+    }
+    
+    func didScrollPage(currentPage: Int) {
+        self.currentPage = currentPage
+        changePage()
+    }
+    
+    func willRemoveFromSuperView() {
+        userDefaultsManager.saveTimerCompleted(completed: true)
     }
 }
