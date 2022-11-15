@@ -7,15 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A02AF02292125C000CD2D44 /* PageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A02AF01292125C000CD2D44 /* PageView.xib */; };
+		2A034141292191C300790566 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A034140292191C300790566 /* TimerView.swift */; };
+		2A034143292191D300790566 /* TimerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A034142292191D300790566 /* TimerView.xib */; };
+		2A0EC8792922E067002AEC8C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8782922E067002AEC8C /* DataManager.swift */; };
+		2A0EC8A5292303A4002AEC8C /* WatchingAction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8A1292303A4002AEC8C /* WatchingAction+CoreDataClass.swift */; };
+		2A0EC8A6292303A4002AEC8C /* WatchingAction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8A2292303A4002AEC8C /* WatchingAction+CoreDataProperties.swift */; };
+		2A0EC8A7292303A4002AEC8C /* WatchedItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8A3292303A4002AEC8C /* WatchedItem+CoreDataClass.swift */; };
+		2A0EC8A8292303A4002AEC8C /* WatchedItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0EC8A4292303A4002AEC8C /* WatchedItem+CoreDataProperties.swift */; };
+		2A690AC6292064AE008D4FBA /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AC5292064AE008D4FBA /* DefaultValues.swift */; };
+		2A690AC829206825008D4FBA /* ChoosingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AC729206825008D4FBA /* ChoosingAssembly.swift */; };
+		2A690ACB2920E161008D4FBA /* ChoosingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A690ACA2920E161008D4FBA /* ChoosingViewController.storyboard */; };
+		2A690ACD2920E1A0008D4FBA /* ChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690ACC2920E1A0008D4FBA /* ChoosingViewController.swift */; };
+		2A690ACF2920E1BC008D4FBA /* ChoosingViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690ACE2920E1BC008D4FBA /* ChoosingViewProtocol.swift */; };
+		2A690AD12920E1DB008D4FBA /* ChoosingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AD02920E1DB008D4FBA /* ChoosingPresenter.swift */; };
+		2A690AD32920E4EE008D4FBA /* ChoosingPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AD22920E4EE008D4FBA /* ChoosingPresenterProtocol.swift */; };
+		2A690AD529210A87008D4FBA /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690AD429210A87008D4FBA /* PageView.swift */; };
+		2A690ADB29210C6A008D4FBA /* ChoosingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690ADA29210C6A008D4FBA /* ChoosingViewModel.swift */; };
+		2A690ADD292111F4008D4FBA /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A690ADC292111F4008D4FBA /* UIView+.swift */; };
 		2A6AF6382920100200A06B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6AF6372920100200A06B61 /* AppDelegate.swift */; };
 		2A6AF63A2920100200A06B61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6AF6392920100200A06B61 /* SceneDelegate.swift */; };
 		2A6AF6422920100200A06B61 /* testTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A6AF6402920100200A06B61 /* testTask.xcdatamodeld */; };
 		2A6AF6442920100600A06B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A6AF6432920100600A06B61 /* Assets.xcassets */; };
 		2A6AF6472920100600A06B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6AF6452920100600A06B61 /* LaunchScreen.storyboard */; };
+		2AE949FA2920280800F706BC /* StartViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE949F92920280800F706BC /* StartViewAssembly.swift */; };
+		2AE949FC2920286300F706BC /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE949FB2920286300F706BC /* StartViewController.swift */; };
+		2AE949FF292028DC00F706BC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE949FE292028DC00F706BC /* BaseViewController.swift */; };
+		2AE94A0129202B1400F706BC /* StartViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE94A0029202B1400F706BC /* StartViewController.storyboard */; };
+		2AE94A0329202BF200F706BC /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE94A0229202BF200F706BC /* StartPresenter.swift */; };
+		2AE94A0529202C8700F706BC /* StartPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE94A0429202C8700F706BC /* StartPresenterProtocol.swift */; };
+		2AE94A0729202CA100F706BC /* StartViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE94A0629202CA100F706BC /* StartViewProtocol.swift */; };
+		2AE94A0929202DF700F706BC /* ViewLifeCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE94A0829202DF600F706BC /* ViewLifeCycle.swift */; };
+		2AE94A0C2920367B00F706BC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE94A0B2920367A00F706BC /* Coordinator.swift */; };
+		2AE94A0E2920451000F706BC /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE94A0D2920451000F706BC /* UserDefaultsManager.swift */; };
+		2AE94A1029204CA200F706BC /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE94A0F29204CA200F706BC /* UIViewController+.swift */; };
+		2AE94A152920508500F706BC /* ViewUpdateble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE94A142920508500F706BC /* ViewUpdateble.swift */; };
 		88172B1D52A71E59AEEB6BB0 /* Pods_testTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53E276649DF4E03379B684DF /* Pods_testTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A02AF01292125C000CD2D44 /* PageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageView.xib; sourceTree = "<group>"; };
+		2A034140292191C300790566 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		2A034142292191D300790566 /* TimerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerView.xib; sourceTree = "<group>"; };
+		2A0EC8782922E067002AEC8C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		2A0EC8A1292303A4002AEC8C /* WatchingAction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchingAction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2A0EC8A2292303A4002AEC8C /* WatchingAction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchingAction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2A0EC8A3292303A4002AEC8C /* WatchedItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchedItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2A0EC8A4292303A4002AEC8C /* WatchedItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchedItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2A690AC5292064AE008D4FBA /* DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
+		2A690AC729206825008D4FBA /* ChoosingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingAssembly.swift; sourceTree = "<group>"; };
+		2A690ACA2920E161008D4FBA /* ChoosingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChoosingViewController.storyboard; sourceTree = "<group>"; };
+		2A690ACC2920E1A0008D4FBA /* ChoosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingViewController.swift; sourceTree = "<group>"; };
+		2A690ACE2920E1BC008D4FBA /* ChoosingViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingViewProtocol.swift; sourceTree = "<group>"; };
+		2A690AD02920E1DB008D4FBA /* ChoosingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingPresenter.swift; sourceTree = "<group>"; };
+		2A690AD22920E4EE008D4FBA /* ChoosingPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingPresenterProtocol.swift; sourceTree = "<group>"; };
+		2A690AD429210A87008D4FBA /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		2A690ADA29210C6A008D4FBA /* ChoosingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosingViewModel.swift; sourceTree = "<group>"; };
+		2A690ADC292111F4008D4FBA /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		2A6AF6342920100200A06B61 /* testTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A6AF6372920100200A06B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A6AF6392920100200A06B61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -23,6 +71,18 @@
 		2A6AF6432920100600A06B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A6AF6462920100600A06B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A6AF6482920100600A06B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE949F92920280800F706BC /* StartViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewAssembly.swift; sourceTree = "<group>"; };
+		2AE949FB2920286300F706BC /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		2AE949FE292028DC00F706BC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2AE94A0029202B1400F706BC /* StartViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartViewController.storyboard; sourceTree = "<group>"; };
+		2AE94A0229202BF200F706BC /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		2AE94A0429202C8700F706BC /* StartPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenterProtocol.swift; sourceTree = "<group>"; };
+		2AE94A0629202CA100F706BC /* StartViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewProtocol.swift; sourceTree = "<group>"; };
+		2AE94A0829202DF600F706BC /* ViewLifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLifeCycle.swift; sourceTree = "<group>"; };
+		2AE94A0B2920367A00F706BC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2AE94A0D2920451000F706BC /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		2AE94A0F29204CA200F706BC /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		2AE94A142920508500F706BC /* ViewUpdateble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUpdateble.swift; sourceTree = "<group>"; };
 		3F7992634E92655BF114423E /* Pods-testTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTask.release.xcconfig"; path = "Target Support Files/Pods-testTask/Pods-testTask.release.xcconfig"; sourceTree = "<group>"; };
 		53E276649DF4E03379B684DF /* Pods_testTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C0315443FEC40EF79C2774F /* Pods-testTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTask.debug.xcconfig"; path = "Target Support Files/Pods-testTask/Pods-testTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -40,6 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A0EC87A2922E82B002AEC8C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2A0EC8A1292303A4002AEC8C /* WatchingAction+CoreDataClass.swift */,
+				2A0EC8A2292303A4002AEC8C /* WatchingAction+CoreDataProperties.swift */,
+				2A0EC8A3292303A4002AEC8C /* WatchedItem+CoreDataClass.swift */,
+				2A0EC8A4292303A4002AEC8C /* WatchedItem+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2A690AD629210A8D008D4FBA /* PageView */ = {
+			isa = PBXGroup;
+			children = (
+				2A690AD429210A87008D4FBA /* PageView.swift */,
+				2A02AF01292125C000CD2D44 /* PageView.xib */,
+			);
+			path = PageView;
+			sourceTree = "<group>";
+		};
 		2A6AF62B2920100200A06B61 = {
 			isa = PBXGroup;
 			children = (
@@ -61,11 +141,14 @@
 		2A6AF6362920100200A06B61 /* testTask */ = {
 			isa = PBXGroup;
 			children = (
+				2A0EC87A2922E82B002AEC8C /* CoreData */,
 				2A6AF6372920100200A06B61 /* AppDelegate.swift */,
 				2A6AF6392920100200A06B61 /* SceneDelegate.swift */,
 				2AE949F42920237B00F706BC /* Modules */,
 				2AE949F32920236400F706BC /* Views */,
+				2AE94A132920505600F706BC /* Protocols */,
 				2AE949F22920232900F706BC /* Managers */,
+				2AE94A0A2920300300F706BC /* Extentions */,
 				2AE949F52920239200F706BC /* Sourses */,
 			);
 			path = testTask;
@@ -74,6 +157,8 @@
 		2AE949F22920232900F706BC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				2AE94A0D2920451000F706BC /* UserDefaultsManager.swift */,
+				2A0EC8782922E067002AEC8C /* DataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -81,6 +166,7 @@
 		2AE949F32920236400F706BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2AE949F8292027DA00F706BC /* TimerView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -88,6 +174,9 @@
 		2AE949F42920237B00F706BC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2AE949F62920279900F706BC /* StartView */,
+				2AE949F7292027AB00F706BC /* ChoosingView */,
+				2AE949FD2920289000F706BC /* Common */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -99,8 +188,73 @@
 				2A6AF6432920100600A06B61 /* Assets.xcassets */,
 				2A6AF6482920100600A06B61 /* Info.plist */,
 				2A6AF6452920100600A06B61 /* LaunchScreen.storyboard */,
+				2A690AC5292064AE008D4FBA /* DefaultValues.swift */,
 			);
 			path = Sourses;
+			sourceTree = "<group>";
+		};
+		2AE949F62920279900F706BC /* StartView */ = {
+			isa = PBXGroup;
+			children = (
+				2AE949F92920280800F706BC /* StartViewAssembly.swift */,
+				2AE94A0429202C8700F706BC /* StartPresenterProtocol.swift */,
+				2AE94A0229202BF200F706BC /* StartPresenter.swift */,
+				2AE94A0629202CA100F706BC /* StartViewProtocol.swift */,
+				2AE949FB2920286300F706BC /* StartViewController.swift */,
+				2AE94A0029202B1400F706BC /* StartViewController.storyboard */,
+			);
+			path = StartView;
+			sourceTree = "<group>";
+		};
+		2AE949F7292027AB00F706BC /* ChoosingView */ = {
+			isa = PBXGroup;
+			children = (
+				2A690AD629210A8D008D4FBA /* PageView */,
+				2A690AC729206825008D4FBA /* ChoosingAssembly.swift */,
+				2A690AD22920E4EE008D4FBA /* ChoosingPresenterProtocol.swift */,
+				2A690AD02920E1DB008D4FBA /* ChoosingPresenter.swift */,
+				2A690ACE2920E1BC008D4FBA /* ChoosingViewProtocol.swift */,
+				2A690ACC2920E1A0008D4FBA /* ChoosingViewController.swift */,
+				2A690ADA29210C6A008D4FBA /* ChoosingViewModel.swift */,
+				2A690ACA2920E161008D4FBA /* ChoosingViewController.storyboard */,
+			);
+			path = ChoosingView;
+			sourceTree = "<group>";
+		};
+		2AE949F8292027DA00F706BC /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				2A034140292191C300790566 /* TimerView.swift */,
+				2A034142292191D300790566 /* TimerView.xib */,
+			);
+			path = TimerView;
+			sourceTree = "<group>";
+		};
+		2AE949FD2920289000F706BC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2AE949FE292028DC00F706BC /* BaseViewController.swift */,
+				2AE94A0829202DF600F706BC /* ViewLifeCycle.swift */,
+				2AE94A0B2920367A00F706BC /* Coordinator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2AE94A0A2920300300F706BC /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				2AE94A0F29204CA200F706BC /* UIViewController+.swift */,
+				2A690ADC292111F4008D4FBA /* UIView+.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		2AE94A132920505600F706BC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2AE94A142920508500F706BC /* ViewUpdateble.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8D382036E6A9F7FB4924E533 /* Frameworks */ = {
@@ -131,6 +285,7 @@
 				2A6AF6302920100200A06B61 /* Sources */,
 				2A6AF6312920100200A06B61 /* Frameworks */,
 				2A6AF6322920100200A06B61 /* Resources */,
+				2A690AC929206C78008D4FBA /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -181,6 +336,10 @@
 			files = (
 				2A6AF6472920100600A06B61 /* LaunchScreen.storyboard in Resources */,
 				2A6AF6442920100600A06B61 /* Assets.xcassets in Resources */,
+				2AE94A0129202B1400F706BC /* StartViewController.storyboard in Resources */,
+				2A690ACB2920E161008D4FBA /* ChoosingViewController.storyboard in Resources */,
+				2A034143292191D300790566 /* TimerView.xib in Resources */,
+				2A02AF02292125C000CD2D44 /* PageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +368,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2A690AC929206C78008D4FBA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -216,9 +393,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0EC8A5292303A4002AEC8C /* WatchingAction+CoreDataClass.swift in Sources */,
+				2AE949FC2920286300F706BC /* StartViewController.swift in Sources */,
+				2AE94A0E2920451000F706BC /* UserDefaultsManager.swift in Sources */,
+				2A690AC829206825008D4FBA /* ChoosingAssembly.swift in Sources */,
 				2A6AF6422920100200A06B61 /* testTask.xcdatamodeld in Sources */,
+				2A690AD12920E1DB008D4FBA /* ChoosingPresenter.swift in Sources */,
+				2A690AC6292064AE008D4FBA /* DefaultValues.swift in Sources */,
+				2A034141292191C300790566 /* TimerView.swift in Sources */,
+				2A0EC8A6292303A4002AEC8C /* WatchingAction+CoreDataProperties.swift in Sources */,
 				2A6AF6382920100200A06B61 /* AppDelegate.swift in Sources */,
+				2AE94A0329202BF200F706BC /* StartPresenter.swift in Sources */,
 				2A6AF63A2920100200A06B61 /* SceneDelegate.swift in Sources */,
+				2AE949FA2920280800F706BC /* StartViewAssembly.swift in Sources */,
+				2AE94A0C2920367B00F706BC /* Coordinator.swift in Sources */,
+				2AE949FF292028DC00F706BC /* BaseViewController.swift in Sources */,
+				2A690ACD2920E1A0008D4FBA /* ChoosingViewController.swift in Sources */,
+				2A690AD529210A87008D4FBA /* PageView.swift in Sources */,
+				2A0EC8A7292303A4002AEC8C /* WatchedItem+CoreDataClass.swift in Sources */,
+				2AE94A1029204CA200F706BC /* UIViewController+.swift in Sources */,
+				2A690AD32920E4EE008D4FBA /* ChoosingPresenterProtocol.swift in Sources */,
+				2AE94A0729202CA100F706BC /* StartViewProtocol.swift in Sources */,
+				2A690ACF2920E1BC008D4FBA /* ChoosingViewProtocol.swift in Sources */,
+				2AE94A0529202C8700F706BC /* StartPresenterProtocol.swift in Sources */,
+				2AE94A152920508500F706BC /* ViewUpdateble.swift in Sources */,
+				2A0EC8A8292303A4002AEC8C /* WatchedItem+CoreDataProperties.swift in Sources */,
+				2A0EC8792922E067002AEC8C /* DataManager.swift in Sources */,
+				2A690ADB29210C6A008D4FBA /* ChoosingViewModel.swift in Sources */,
+				2AE94A0929202DF700F706BC /* ViewLifeCycle.swift in Sources */,
+				2A690ADD292111F4008D4FBA /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

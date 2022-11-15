@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TimerView" customModule="testTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWj-AT-o1r">
+                    <rect key="frame" x="0.0" y="-44" width="320" height="668"/>
+                    <color key="backgroundColor" name="BackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DdI-qy-xzo">
+                    <rect key="frame" x="44" y="142" width="232" height="284"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-wa-NOr">
+                            <rect key="frame" x="32" y="200" width="168" height="52"/>
+                            <color key="backgroundColor" name="TintColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="u5z-UD-mVZ"/>
+                            </constraints>
+                            <color key="tintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Continiue">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didTapContiniue:" destination="iN0-l3-epB" eventType="touchUpInside" id="hZv-Rq-FWn"/>
+                            </connections>
+                        </button>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="WTp-2M-8NL">
+                            <rect key="frame" x="32" y="140" width="168" height="4"/>
+                            <color key="tintColor" name="TintColor"/>
+                        </progressView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D6-hb-l8g">
+                            <rect key="frame" x="32" y="35.5" width="168" height="72.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="62"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="beJ-wa-NOr" firstAttribute="leading" secondItem="DdI-qy-xzo" secondAttribute="leading" constant="32" id="CP3-Em-w4h"/>
+                        <constraint firstItem="WTp-2M-8NL" firstAttribute="leading" secondItem="beJ-wa-NOr" secondAttribute="leading" id="HqX-Mo-MJi"/>
+                        <constraint firstItem="WTp-2M-8NL" firstAttribute="centerX" secondItem="DdI-qy-xzo" secondAttribute="centerX" id="MPp-If-0LY"/>
+                        <constraint firstAttribute="bottom" secondItem="beJ-wa-NOr" secondAttribute="bottom" constant="32" id="O2w-la-Urf"/>
+                        <constraint firstAttribute="trailing" secondItem="beJ-wa-NOr" secondAttribute="trailing" constant="32" id="YQn-6I-TOv"/>
+                        <constraint firstItem="WTp-2M-8NL" firstAttribute="trailing" secondItem="beJ-wa-NOr" secondAttribute="trailing" id="mGB-lh-8Ja"/>
+                        <constraint firstAttribute="trailing" secondItem="2D6-hb-l8g" secondAttribute="trailing" constant="32" id="szP-Wo-3X4"/>
+                        <constraint firstItem="WTp-2M-8NL" firstAttribute="top" secondItem="2D6-hb-l8g" secondAttribute="bottom" constant="32" id="uMC-Mi-BI8"/>
+                        <constraint firstItem="WTp-2M-8NL" firstAttribute="centerY" secondItem="DdI-qy-xzo" secondAttribute="centerY" id="uwh-qn-bKC"/>
+                        <constraint firstItem="2D6-hb-l8g" firstAttribute="leading" secondItem="DdI-qy-xzo" secondAttribute="leading" constant="32" id="vI9-y8-S9M"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="ZWj-AT-o1r" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="1eT-FI-Xkg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZWj-AT-o1r" secondAttribute="trailing" id="5bv-3K-iDQ"/>
+                <constraint firstItem="ZWj-AT-o1r" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="56" id="JYP-ei-kHN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="ZWj-AT-o1r" secondAttribute="top" constant="44" id="Nju-N7-CPv"/>
+                <constraint firstItem="DdI-qy-xzo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="44" id="OV4-JY-s0Q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DdI-qy-xzo" secondAttribute="trailing" constant="44" id="f9t-oU-Ib6"/>
+                <constraint firstItem="DdI-qy-xzo" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="gGP-66-hMH"/>
+                <constraint firstItem="DdI-qy-xzo" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="q7R-Tf-TlK"/>
+            </constraints>
+            <connections>
+                <outlet property="continiueButton" destination="beJ-wa-NOr" id="zbY-vj-tCj"/>
+                <outlet property="durationProgress" destination="WTp-2M-8NL" id="UeQ-zZ-ok3"/>
+                <outlet property="presentationLabel" destination="2D6-hb-l8g" id="RdX-UM-p07"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.1289999932050705" green="0.1289999932050705" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TintColor">
+            <color red="0.93699997663497925" green="0.53700000047683716" blue="0.37400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

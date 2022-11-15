@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Choosing View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ChoosingViewController" customModule="testTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Fdf-Kb-dFq">
+                                <rect key="frame" x="20" y="732" width="374" height="26"/>
+                                <color key="tintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="JJk-ev-1B5"/>
+                                </constraints>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFR-in-Bq8">
+                                <rect key="frame" x="24" y="786" width="366" height="52"/>
+                                <color key="backgroundColor" name="TintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="W0m-i3-8pE"/>
+                                </constraints>
+                                <color key="tintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapNavigationButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="d8o-4n-kJH"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXX-r9-cVo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="680"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="cJb-xb-C1Y"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MFR-in-Bq8" secondAttribute="trailing" constant="24" id="EUT-3m-GKA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Fdf-Kb-dFq" secondAttribute="trailing" constant="20" id="EaO-ut-JXd"/>
+                            <constraint firstItem="MFR-in-Bq8" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-24" id="FZo-Yc-VwE"/>
+                            <constraint firstItem="Fdf-Kb-dFq" firstAttribute="top" secondItem="jXX-r9-cVo" secondAttribute="bottom" constant="8" symbolic="YES" id="OSy-ED-4A7"/>
+                            <constraint firstItem="jXX-r9-cVo" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Rc9-Bu-grA"/>
+                            <constraint firstItem="MFR-in-Bq8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="fEq-Bj-vTd"/>
+                            <constraint firstItem="Fdf-Kb-dFq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="iwA-q1-SAe"/>
+                            <constraint firstItem="MFR-in-Bq8" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="lnN-BK-Qoa"/>
+                            <constraint firstItem="MFR-in-Bq8" firstAttribute="top" secondItem="Fdf-Kb-dFq" secondAttribute="bottom" constant="28" id="qQF-1A-2Xq"/>
+                            <constraint firstItem="jXX-r9-cVo" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="uBE-mh-pEj"/>
+                            <constraint firstItem="jXX-r9-cVo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vpb-PH-6FN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigationButton" destination="MFR-in-Bq8" id="flZ-eu-NIJ"/>
+                        <outlet property="pageControl" destination="Fdf-Kb-dFq" id="m7x-9d-iop"/>
+                        <outlet property="scrollView" destination="jXX-r9-cVo" id="IE7-yt-N6Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66.666666666666671" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.1289999932050705" green="0.1289999932050705" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TintColor">
+            <color red="0.93699997663497925" green="0.53700000047683716" blue="0.37400001287460327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
